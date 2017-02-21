@@ -6,6 +6,7 @@ Comment.plugin('contentToHtml', {
 	afterFind: function(comments) {
 		return comments.map(function(comment) {
 			comment.content = marked(comment.content);
+			return comment;
 		});
 	}
 });
